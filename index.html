@@ -129,8 +129,12 @@
 		right: 180px;
 	}
 
+	#adc-title {
+		top: -20px;
+	}
+
 	#adc-content {
-		top: 30px;
+		top: 10px;
 		padding-left: 15%;
 	}
 
@@ -139,16 +143,30 @@
 	}
 
 	#jsa-content {
-		top: 135px;
+		top: 132px;
 		padding-left: 15%;
 	}
 
 	#community {
-		top: 500px;
+		position: absolute;
+		top: 440px;
+	}
+
+	#community-content {
+		top: 490px;
 	}
 
 	#next-button:hover {
 		opacity: 0.5;
+	}
+
+	#programs {
+		position: absolute;
+		top: 550px; 
+	}
+
+	#program-content {
+		top: 600px;
 	}
 
 	.title-text {
@@ -327,7 +345,7 @@
 			<br><br><hr>
 			<p class="title-text overlay-subtitles"> Leadership </p>
 				<div class="content-container">
-				<p class="content-text overlay-content"> 
+				<p class="content-text overlay-content" id="adc-title"> 
 				App Developer Club: Technical Leader<br>
 					<p class="content-text overlay-content-sm" id="adc-content"> Developed curriculum, led industry outreach, and taught Swift and Sketch workshops for the Stanford App Developer Club’s flagship mobile development and design bootcamp</p><br><br>
 				<p class="content-text overlay-content" id="jsa-title">
@@ -339,12 +357,20 @@
 				</div>
 				</p><br>
 			<p class="title-text overlay-subtitles" id="community"> Community </p>
-				<!--<div id="content-container">
-					<p class="content-text overlay-content" style="top:320px"> 
+				<div id="content-container">
+					<p class="content-text overlay-content" id="community-content"> 
 					School of Engineering: Computer Forum Student Ambassador<br>
 					Make School: Hackathon Ambassador
 					</p>
-				</div>-->
+				</div>
+			<p class="title-text overlay-subtitles" id="programs"> Programs </p>
+				<div id="content-container">
+					<p class="content-text overlay-content" id="program-content"> 
+					Stanford University: Asia-Pacific Entrepreneurship Society<br>
+					Make School: Apps Track<br>
+					FermiLab: QuarkNet CMS Data Program
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
