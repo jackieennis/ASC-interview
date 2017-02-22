@@ -1,0 +1,255 @@
+	a {
+		text-decoration: none;
+		color: white;
+	}
+
+	a:hover {
+		color: lightgray;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	#section-1 {
+		position: relative;
+		margin: 0px;
+		top: 0px;
+		left: 0px;
+		height: 712px;
+		width: 100%;
+		background-image: url("https://i.ytimg.com/vi/yKk3WDSFOos/maxresdefault.jpg");
+		background-size: 100% 100%;
+		
+	}
+
+	#section-2 {
+		position: relative;
+		top: 0px;
+		left: 0px;
+		height: 856px;
+		width: 100%;
+		background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Stanford_Memorial_Church_May_2011_001.jpg/1200px-Stanford_Memorial_Church_May_2011_001.jpg);
+		background-size: 100% 100%;
+	}
+
+	#section-3 {
+		position: relative;
+		top: 0px;
+		left: 0px;
+		height: 630px;
+		width: 100%;
+		background-color: white;
+
+	}
+
+	#profile-pic {
+		position: absolute;
+		top: 30px;
+		left: 30px;
+		height: 175px;
+		width: 175px;
+		border-radius: 50%;
+
+	}
+
+	#title {
+		position: absolute;
+		left: 220px;
+		font-size: 40px;
+	}
+
+	#subtitle {
+		position: absolute;
+		top: 69px;
+		left: 230px;
+		font-size: 25px;
+	}
+
+	#overlay-1 {
+		left: 50px;
+	}
+
+	#overlay-2 {
+		right: 50px;
+	}
+
+	#major-description {
+		font-size: 16px;
+		top: 49px;
+		width: 95%;
+		text-align: right;
+	}
+
+	#view-paper {
+		right: 45px;
+	}
+
+	#view-resume {
+		right: 24px;
+		top: 70px;
+	}
+
+	#experiences-content {
+		text-align: right;
+		padding-right: 10px;
+	}
+
+	#software-dev {
+		position: absolute;
+		padding-left: 15px;
+		top: 20px;
+		margin: 0px;
+		font-size: 36px;
+	}
+
+	#next-button {
+		height: 120px;
+		position: absolute;
+		top: 220px;
+		right: 180px;
+	}
+
+	#adc-title {
+		top: -20px;
+	}
+
+	#adc-content {
+		top: 10px;
+		padding-left: 15%;
+	}
+
+	#jsa-title {
+		top: 100px;
+	}
+
+	#jsa-content {
+		top: 132px;
+		padding-left: 15%;
+	}
+
+	#community {
+		position: absolute;
+		top: 440px;
+	}
+
+	#community-content {
+		top: 490px;
+	}
+
+	#next-button:hover {
+		opacity: 0.5;
+	}
+
+	#programs {
+		position: absolute;
+		top: 550px; 
+	}
+
+	#program-content {
+		top: 600px;
+	}
+
+	.title-text {
+		color: white;
+		font-family: 'Libre Baskerville', serif; 
+	}
+
+	.content-text {
+		position: absolute;
+		color: white;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	.engineer-title {
+		font-family: 'Inconsolata', monospace;
+		color: black;
+	}
+
+	.transparent-overlay {
+		position: absolute;
+		top: 20px;
+		height: 756px;
+		width: 45%;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+
+	.overlay-titles {
+		font-size: 28px;
+		text-align: right;
+		width: 95%;
+	}
+
+	.overlay-subtitles {
+		font-size: 24px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		padding-left: 18px;
+	}
+
+	.overlay-content {
+		font-size: 17px;
+		font-style: bold;
+		padding-left: 50px;
+		padding-right: 20px;
+	}
+
+	.overlay-content-sm {
+		font-size: 15px;
+		padding-left: 50px;
+		padding-right: 20px;
+	}
+
+	.content-container {
+		position: relative;
+		top: 0px;
+	}
+
+	.button {
+		position: absolute;
+		border-style: solid;
+		border-width: 0.5px;
+    	background-color: transparent; /* Green */
+    	color: white;
+    	height: 35px;
+    	line-height: 35px;
+    	width: 150px;
+    	text-align: center;
+    	font-size: 15px;
+    	font-family: 'Open Sans', sans-serif;
+    	cursor: pointer;
+	}
+
+	.portfolio-divs {
+		position: relative;
+		height: 500px;
+		top: 10px;
+	}
+
+	.portfolio-imgs {
+		position: absolute;
+		left: 50%;
+		width: 18%;
+		padding-left: 50px;
+
+	}
+
+	.portfolio-titles {
+		position: relative;
+		padding-top: 20px;
+		left: 80px;
+		font-size: 28px;
+	}
+
+	.portfolio-content {
+		position: absolute;
+		width: 40%;
+		left: 100px;
+		font-size: 19px;
+		color: black;
+	}
+
+	.initial-hide {
+		display: none;
+	}
