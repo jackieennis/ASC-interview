@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Libre+Baskerville|Inconsolata" rel="stylesheet">
+
+<style type="text/css"> 
+	
+	a {
+		text-decoration: none;
+		color: white;
+	}
+
+	a:hover {
+		color: lightgray;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	#section-1 {
+		position: relative;
+		margin: 0px;
+		top: 0px;
+		left: 0px;
+		height: 712px;
+		width: 100%;
+		background-image: url("https://i.ytimg.com/vi/yKk3WDSFOos/maxresdefault.jpg");
+		background-size: 100% 100%;
+		
+	}
+
+	#section-2 {
+		position: relative;
+		top: 0px;
+		left: 0px;
+		height: 856px;
+		width: 100%;
+		background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Stanford_Memorial_Church_May_2011_001.jpg/1200px-Stanford_Memorial_Church_May_2011_001.jpg);
+		background-size: 100% 100%;
+	}
+
+	#section-3 {
+		position: relative;
+		top: 0px;
+		left: 0px;
+		height: 680px;
+		width: 100%;
+		background-color: white;
+
+	}
+
+	#section-4 {
+		position: relative;
+		top: 2100px;
+		left: 0px;
+		height: 750px;
+		width: 100%;
+		background-color: green;
+	}
+
+
+	#profile-pic {
+		position: absolute;
+		top: 30px;
+		left: 30px;
+		height: 175px;
+		width: 175px;
+		border-radius: 50%;
+
+	}
+
+	#title {
+		position: absolute;
+		left: 220px;
+		font-size: 40px;
+	}
+
+	#subtitle {
+		position: absolute;
+		top: 69px;
+		left: 230px;
+		font-size: 25px;
+	}
+
+	#overlay-1 {
+		left: 50px;
+	}
+
+	#overlay-2 {
+		right: 50px;
+	}
+
+	#major-description {
+		font-size: 16px;
+		top: 49px;
+		width: 95%;
+		text-align: right;
+	}
+
+	#view-paper {
+		right: 45px;
+	}
+
+	#view-resume {
+		right: 24px;
+		top: 70px;
+	}
+
+	#experiences-content {
+		text-align: right;
+		padding-right: 10px;
+	}
+
+	#software-dev {
+		position: absolute;
+		padding-left: 15px;
+		top: 20px;
+		margin: 0px;
+		font-size: 36px;
+	}
+
+	#next-button {
+		height: 120px;
+		position: absolute;
+		top: 200px;
+		right: 180px;
+	}
+
+	#next-button:hover {
+		opacity: 0.5;
+	}
+
+	#community-content {
+		top: 500px;
+	}
+
+
+	.title-text {
+		color: white;
+		font-family: 'Libre Baskerville', serif; 
+	}
+
+	.content-text {
+		position: absolute;
+		color: white;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	.engineer-title {
+		font-family: 'Inconsolata', monospace;
+		color: black;
+	}
+
+	.transparent-overlay {
+		position: absolute;
+		top: 20px;
+		height: 756px;
+		width: 45%;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+
+	.overlay-titles {
+		font-size: 28px;
+		text-align: right;
+		width: 95%;
+	}
+
+	.overlay-subtitles {
+		font-size: 24px;
+		padding-left: 18px;
+	}
+
+	.overlay-content {
+		top: 180px;
+		font-size: 17px;
+		font-style: bold;
+		padding-left: 50px;
+		padding-right: 20px;
+	}
+
+	.overlay-content-sm {
+		font-size: 15px;
+		padding-left: 50px;
+		padding-right: 20px;
+	}
+
+	.button {
+		position: absolute;
+		border-style: solid;
+		border-width: 0.5px;
+    	background-color: transparent; /* Green */
+    	color: white;
+    	height: 35px;
+    	line-height: 35px;
+    	width: 150px;
+    	text-align: center;
+    	font-size: 15px;
+    	font-family: 'Open Sans', sans-serif;
+    	cursor: pointer;
+	}
+
+	.portfolio-divs {
+		position: relative;
+		height: 480px;
+		top: 10px;
+	}
+
+	.portfolio-imgs {
+		position: absolute;
+		left: 640px;
+		width: 18%;
+		padding-left: 50px;
+
+	}
+
+	.portfolio-titles {
+		position: relative;
+		padding-top: 20px;
+		left: 80px;
+		font-size: 28px;
+	}
+
+	.portfolio-content {
+		position: absolute;
+		width: 40%;
+		left: 100px;
+		font-size: 19px;
+		color: black;
+	}
+
+	.initial-hide {
+		display: none;
+	}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+		var portfoliodivs = ["#portfolio-1", "#portfolio-2", "#portfolio-3"]
+		i = 0;
+		j = i + 1;
+		k = i + 2;
+		$("#next-button").click(function() {
+			$(portfoliodivs[i]).show();
+			$(portfoliodivs[j]).hide();
+			$(portfoliodivs[k]).hide();
+			if (i == 0) {
+				i = 1;
+				j = 2;
+				k = 0;
+			} else if (i == 1) {
+				i = 2;
+				j = 0;
+				k = 1;
+			} else {
+				i = 0;
+				j = 1;
+				k = 2;
+			}
+        });
+	});
+</script>
+
+<title>Jacqueline Ennis</title>
+
+</head>
+
+<body>
+	<div id="section-1">
+		<img id="profile-pic" src="asc-files/museum.jpg" align="middle">
+		<p class="title-text" id="title"> jackie ennis </p>
+		<p class="title-text" id="subtitle"> 
+			<a href="#section-2">student</a> | <a href="#section-3">engineer</a> | <a href="#section-4">designer</a>
+		</p>
+	</div>
+	<div id="section-2">
+		<div class="transparent-overlay" id="overlay-1">
+			<p class="title-text overlay-titles"> Symbolic Systems </p>
+			<p class="content-text" id="major-description"> a study of computer science, psychology, linguistics
+			<br><br>
+			Stanford University, Class of 2020
+			</p>
+			<br><br>
+			<hr>
+			<p class="title-text overlay-subtitles"> Coursework </p>
+			<p class="content-text overlay-content"> 
+				CS106B: Programming Abstractions in C++<br>
+				CS96SI: iOS Development for Mobile Health<br>
+				THINK40: Sustainability Challenges and Transitions<br>
+				CS107: Computer Organization and Systems<br>
+				CS103: Mathematical Foundations of Computing<br>
+				EARTH1B: Big Data for Sustainability<br>
+				ECON1: Principles of Economics <br><br>
+				"Pursuing a Diversified Energy Portfolio" Research-Based Argument, Program in Writing & Rhetoric, 2016.
+				<br><br>
+				<a href="https://goo.gl/ICVYZ4" target="_blank" class="button" id="view-paper">View the paper > </a>
+			</p>
+		</div>
+		<div class="transparent-overlay" id="overlay-2">
+			<p class="title-text overlay-titles"> Experiences </p>
+			<a href="https://tinyurl.com/jackieennis" target="_blank" class="button" id="view-resume">View my resume > 
+			</a>
+			<br><br><hr>
+			<p class="title-text overlay-subtitles"> Leadership </p>
+				<p class="content-text overlay-content"> 
+				App Developer Club: Technical Leader<br>
+				<div>
+					<p class="content-text overlay-content-sm"> Developed curriculum, led industry outreach, and taught Swift and Sketch workshops for the Stanford App Developer Club’s flagship mobile development and design bootcamp</p>
+					<p class="content-text overlay-content">
+				Junior Statesmen of America: Chapter President
+					</p>
+					<p class="content-text overlay-content-sm">
+					Oversaw all fundraisers, elections, meetings, and debates; advocated for chapter’s first attendances at JSA-wide congressional conferences in NJ and DC, where members legislate their own bills.
+					</p>
+				</div>
+				</p><br><br><br>
+				<p class="title-text overlay-subtitles"> Community </p>
+				<div id="community-content">
+				<p class="content-text overlay-content"> 
+					School of Engineering: Computer Forum Student Ambassador<br>
+					Make School: Hackathon Ambassador
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="section-3">
+		<p class="engineer-title" id="software-dev"> // software development + design </p><br><br><br>
+		<div class="portfolio-divs" id="portfolio-1">
+			<a href="https://github.com/jackieennis/Leaf-HealthPlusPlus" target="_blank"><img class="portfolio-imgs" src="asc-files/leaf.gif" ></a>
+			<p class="engineer-title portfolio-titles">Leaf</p>
+			<p class="content-text portfolio-content"><i>health++ hackathon, Stanford University, November 2016.</i></p><br><br><br><br>
+			<p class="content-text portfolio-content">A cloud-based patient records platform for iOS. Developed by Jackie Ennis, Autumn Greco, Kenny Batista, and Alex Wang using Swift and Sketch.</p><br>
+			<br>
+		</div>
+		<div class="portfolio-divs initial-hide" id="portfolio-2">
+			<a href="https://github.com/jackieennis/CS96SI-timely" target="_blank"><img class="portfolio-imgs" src="asc-files/timely.png"></a>
+			<p class="engineer-title portfolio-titles">Timely</p>
+			<p class="content-text portfolio-content italicized">Project for Stanford's CS96SI: iOS Development for Mobile Health, Fall 2016</p><br><br><br><br>
+			<p class="content-text portfolio-content">An iOS app designed to help family and friends navigate the caregiving process for patients afflicted by neurodegenerative diseases. Developed using Swift and Sketch.</p><br>
+		</div>
+		<div class="portfolio-divs initial-hide" id="portfolio-3">
+			<a href=https://github.com/jackieennis/AppCoda-Intermediate-iOS-10 target="_blank"><img class="portfolio-imgs" src="asc-files/appcoda.png"></a>
+			<p class="engineer-title portfolio-titles">Simon Ng's AppCoda</p>
+			<p class="content-text portfolio-content">Learning to become a better iOS developer through 37 chapters of feature implementations and demo projects.</p>
+		</div>
+		<div id="button-container"><img src="asc-files/next-button.png" id="next-button"></div>
+	</div>
+</body>
+
+</html>
