@@ -129,14 +129,27 @@
 		right: 180px;
 	}
 
-	#next-button:hover {
-		opacity: 0.5;
+	#adc-content {
+		top: 30px;
+		padding-left: 15%;
 	}
 
-	#community-content {
+	#jsa-title {
+		top: 100px;
+	}
+
+	#jsa-content {
+		top: 135px;
+		padding-left: 15%;
+	}
+
+	#community {
 		top: 500px;
 	}
 
+	#next-button:hover {
+		opacity: 0.5;
+	}
 
 	.title-text {
 		color: white;
@@ -170,11 +183,12 @@
 
 	.overlay-subtitles {
 		font-size: 24px;
+		padding-top: 0px;
+		padding-bottom: 0px;
 		padding-left: 18px;
 	}
 
 	.overlay-content {
-		top: 180px;
 		font-size: 17px;
 		font-style: bold;
 		padding-left: 50px;
@@ -185,6 +199,11 @@
 		font-size: 15px;
 		padding-left: 50px;
 		padding-right: 20px;
+	}
+
+	.content-container {
+		position: relative;
+		top: 0px;
 	}
 
 	.button {
@@ -210,7 +229,7 @@
 
 	.portfolio-imgs {
 		position: absolute;
-		left: 640px;
+		left: 50%;
 		width: 18%;
 		padding-left: 50px;
 
@@ -307,24 +326,25 @@
 			</a>
 			<br><br><hr>
 			<p class="title-text overlay-subtitles"> Leadership </p>
+				<div class="content-container">
 				<p class="content-text overlay-content"> 
 				App Developer Club: Technical Leader<br>
-				<div>
-					<p class="content-text overlay-content-sm"> Developed curriculum, led industry outreach, and taught Swift and Sketch workshops for the Stanford App Developer Club’s flagship mobile development and design bootcamp</p>
-					<p class="content-text overlay-content">
+					<p class="content-text overlay-content-sm" id="adc-content"> Developed curriculum, led industry outreach, and taught Swift and Sketch workshops for the Stanford App Developer Club’s flagship mobile development and design bootcamp</p><br><br>
+				<p class="content-text overlay-content" id="jsa-title">
 				Junior Statesmen of America: Chapter President
-					</p>
-					<p class="content-text overlay-content-sm">
+					</p><br>
+					<p class="content-text overlay-content-sm" id="jsa-content">
 					Oversaw all fundraisers, elections, meetings, and debates; advocated for chapter’s first attendances at JSA-wide congressional conferences in NJ and DC, where members legislate their own bills.
-					</p>
+					</p><br>
 				</div>
-				</p><br><br><br>
-				<p class="title-text overlay-subtitles"> Community </p>
-				<div id="community-content">
-				<p class="content-text overlay-content"> 
+				</p><br>
+			<p class="title-text overlay-subtitles" id="community"> Community </p>
+				<!--<div id="content-container">
+					<p class="content-text overlay-content" style="top:320px"> 
 					School of Engineering: Computer Forum Student Ambassador<br>
 					Make School: Hackathon Ambassador
-				</p>
+					</p>
+				</div>-->
 			</div>
 		</div>
 	</div>
